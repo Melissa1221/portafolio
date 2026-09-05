@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-  html,
-  body,
-  #root {
-    height: 100%;
+  html {
+    scroll-behavior: smooth;
+    /* el header fijo no debe tapar el titulo al saltar a una seccion */
+    scroll-padding-top: 5rem;
   }
 
   body {
     margin: 0;
     background-color: #2b1013;
+    color: #e4d1c0;
     font-family: 'Helvetica Neue ME', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
@@ -104,6 +105,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .anim-fade-in,
   .anim-rise-in,
   .anim-fade-up,
