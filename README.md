@@ -1,32 +1,54 @@
-# React + TypeScript + Vite
+# Portafolio — Melissa Iman Noriega
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Hero editorial de un solo viewport. Vite + React + TypeScript + Tailwind.
 
-Currently, two official plugins are available:
+## Correr
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Estructura
+
+```
+src/
+  App.tsx      hero completo (header, marquee, retrato, footer, drawer)
+  index.css    keyframes de entrada + marquee + reduced-motion
+public/img/
+  bg.jpg       fondo generado (gradiente ruby con grano)
+  melissa.webp retrato recortado con transparencia
+```
+
+## Paleta
+
+| Rol | Hex | Uso |
+|---|---|---|
+| Ruby | `#AB3940` | acento del fondo |
+| Rhodonite | `#AC515F` | secundario |
+| Pink Opal | `#FE9DA7` | acento claro |
+| Cookie Batter | `#E4D1C0` | todo el texto |
+| Jeans | `#5A7A99` | frio, contrapunto |
+| Ink | `#2B1013` | base oscura |
+
+## Tipografia
+
+- **Fraunces** (Google Fonts, variable con ejes `SOFT` y `WONK`) para display: el nombre gigante, el brand y los links del drawer.
+- **Helvetica Neue ME** para el chrome: nav, footer, labels.
+
+## Animaciones
+
+| Clase | Duracion | Aplica a |
+|---|---|---|
+| `anim-fade-in` | 1.2s ease-out | fondo |
+| `anim-rise-in` | 1.4s | retrato (delay 300ms) |
+| `anim-fade-up` | 0.9s | chrome, escalonado 500→1550ms |
+| `anim-line` | 1.1s | regla horizontal (delay 1200ms) |
+| `.marquee` | 30s linear infinite | nombre |
+
+Todas se colapsan bajo `prefers-reduced-motion: reduce`.
+
+## Pendiente
+
+- Links reales de LinkedIn e Instagram (hoy `#`)
+- Secciones de Historia / Trabajo / Mensaje
