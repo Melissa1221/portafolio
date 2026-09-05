@@ -1,6 +1,6 @@
 /**
- * TODO Melissa: este archivo es el unico que necesitas tocar para
- * cambiar los textos. El layout no depende de que tan largos sean.
+ * Este es el unico archivo que necesitas tocar para cambiar los textos.
+ * El layout se acomoda solo, sin importar que tan largo escribas.
  */
 
 export const NAV = [
@@ -12,7 +12,7 @@ export const NAV = [
 
 export const SOCIAL = [
   { label: 'GitHub', href: 'https://github.com/Melissa1221' },
-  { label: 'LinkedIn', href: '#' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/melissa-iman' },
   { label: 'Instagram', href: '#' },
 ]
 
@@ -21,56 +21,69 @@ export const HERO = {
   apellido: 'Iman',
   anio: '2026',
   izquierda: [
-    '[UNA LINEA: que estudias o que haces]',
-    '[UNA LINEA: como te describis profesionalmente]',
-    '[UNA LINEA: algo tuyo, con personalidad]',
+    'Ingenieria de software y producto',
+    'Ciencia de la Computacion, UNI',
+    'Escucho problemas y construyo la salida',
   ],
   derecha: ['Lima, Peru', 'UNI — FC'],
 }
 
 export const SOBRE = {
   etiqueta: 'Sobre mi',
-  // El parrafo grande que abre la seccion. Que sea una sola idea fuerte.
+
+  // OPCION A (la que esta activa). Apunta a tu manera de trabajar.
   titular:
-    '[ESCRIBI ACA TU FRASE DE APERTURA. Una sola idea, en primera persona, que diga a que le dedicas la cabeza. Puede ser larga: la tipografia grande la sostiene.]',
+    'Me interesa menos la tecnologia que la persona del otro lado. Escucho un problema, entiendo a quien le duele, y recien ahi decido que construir.',
+
+  // OPCION B — si preferis esta, borra la de arriba y descomenta:
+  // titular:
+  //   'Construyo software para problemas que le importan a alguien. Empiezo escuchando, y el codigo viene despues.',
+
+  // OPCION C — mas corta y directa:
+  // titular:
+  //   'Escucho problemas. Construyo la salida. En ese orden.',
+
   parrafos: [
-    '[PRIMER PARRAFO: de donde venis y que estudias. Contexto.]',
-    '[SEGUNDO PARRAFO: que te interesa de verdad, en que te estas metiendo ahora.]',
+    'Naci en Lima y estudio Ciencia de la Computacion en la Universidad Nacional de Ingenieria. Entre a la carrera con una beca del BCP y desde los primeros ciclos me meti a competir en hackathons: llegue a finalista nacional del Hult Prize, y esa costumbre de armar algo funcionando contra reloj me llevo a Chile, a Suiza y a una pasantia de investigacion con financiamiento completo en la Universidad de Alberta, en Canada.',
+    'Hoy hago ingenieria de software y gestion de producto. Lo que de verdad me mueve es crear empresas y resolver problemas de gente real, sobre todo los sociales: finanzas personales para quien nunca llevo un registro de sus gastos, o pequenos emprendedores que necesitan digitalizarse y ordenarse para poder crecer. Me gusta sentarme a escuchar un problema complejo y encontrar por donde la tecnologia lo destraba.',
   ],
+
   datos: [
-    { clave: 'Estudio', valor: '[Tu carrera / universidad]' },
-    { clave: 'Enfoque', valor: '[En que te especializas]' },
+    { clave: 'Estudio', valor: 'Ciencia de la Computacion, UNI' },
+    { clave: 'Enfoque', valor: 'Producto e ingenieria de software' },
     { clave: 'Base', valor: 'Lima, Peru' },
   ],
 }
 
 export const TRABAJO = {
   etiqueta: 'Trabajo',
-  titular: '[UNA FRASE que enmarque lo que mostras abajo]',
+  titular: 'Investigacion, sistemas legados y producto: tres formas de atacar el mismo problema.',
   proyectos: [
     {
-      titulo: '[NOMBRE DEL PROYECTO]',
-      rol: '[TU ROL]',
-      anio: '[ANIO]',
+      titulo: 'Evaluacion automatica de usabilidad web',
+      rol: 'Tesis',
+      anio: '2026',
       descripcion:
-        '[DOS O TRES LINEAS: que problema resuelve y que hiciste vos. Concreto, sin adjetivos de relleno.]',
-      tags: ['[tecnologia]', '[tecnologia]', '[area]'],
+        'Framework que evalua la usabilidad de una interfaz web usando agentes inteligentes multimodales. Auditar usabilidad hoy exige horas de un especialista; la propuesta es que un agente lea la pantalla como la leeria una persona y reporte donde se traba.',
+      tags: ['Agentes multimodales', 'Usabilidad', 'Investigacion'],
       href: '#',
     },
     {
-      titulo: '[NOMBRE DEL PROYECTO]',
-      rol: '[TU ROL]',
-      anio: '[ANIO]',
-      descripcion: '[DOS O TRES LINEAS sobre este proyecto.]',
-      tags: ['[tecnologia]', '[tecnologia]'],
+      titulo: 'Genera',
+      rol: 'Co-fundadora y lider tecnica',
+      anio: '2024 — 2025',
+      descripcion:
+        'Plataforma de generacion de planificacion curricular para docentes con IA generativa. Del cero a produccion en dos meses, con arquitectura full stack en Next.js y LangChain, y alianzas con universidades y entidades de gobierno.',
+      tags: ['Next.js', 'LangChain', 'TypeScript', 'Producto'],
       href: '#',
     },
     {
-      titulo: '[NOMBRE DEL PROYECTO]',
-      rol: '[TU ROL]',
-      anio: '[ANIO]',
-      descripcion: '[DOS O TRES LINEAS sobre este proyecto.]',
-      tags: ['[tecnologia]', '[area]'],
+      titulo: 'Asistente RAG multimodal — U. de Alberta',
+      rol: 'Investigadora',
+      anio: '2025',
+      descripcion:
+        'Pasantia de investigacion con beca completa en el Departamento de Ingenieria Civil. Migre un sistema de 15 anios y 11,000 lineas de una estructura monolitica a arquitectura modular en C++, y construi un asistente RAG que procesa PDFs e imagenes para acelerar la busqueda documental del equipo.',
+      tags: ['LangChain', 'Bases vectoriales', 'C++', 'RAG'],
       href: '#',
     },
   ],
@@ -78,34 +91,45 @@ export const TRABAJO = {
 
 export const CAMINO = {
   etiqueta: 'Camino',
-  titular: '[UNA FRASE sobre tu recorrido hasta ahora]',
+  titular: 'De un hackathon en Lima a un laboratorio en Canada, sin soltar la misma pregunta: a quien le sirve esto.',
   hitos: [
     {
-      periodo: '[ANIO — ANIO]',
-      titulo: '[QUE HICISTE / DONDE]',
-      detalle: '[UNA O DOS LINEAS de contexto.]',
+      periodo: '2022 — presente',
+      titulo: 'Ciencia de la Computacion, UNI',
+      detalle:
+        'Entre con beca del BCP. Desde los primeros ciclos compiti en hackathons en Peru, Chile y Suiza, y llegue a finalista nacional del Hult Prize.',
     },
     {
-      periodo: '[ANIO — ANIO]',
-      titulo: '[QUE HICISTE / DONDE]',
-      detalle: '[UNA O DOS LINEAS de contexto.]',
+      periodo: '2024 — presente',
+      titulo: 'Cofoundy — Co-fundadora y lider tecnica',
+      detalle:
+        'Consultora de software que acompania a fundadores como su socio tecnico. Lidere Genera y arme los procesos de desarrollo del equipo.',
     },
     {
-      periodo: '[ANIO — ANIO]',
-      titulo: '[QUE HICISTE / DONDE]',
-      detalle: '[UNA O DOS LINEAS de contexto.]',
+      periodo: '2025',
+      titulo: 'Universidad de Alberta, Canada',
+      detalle:
+        'Pasantia de investigacion con financiamiento completo, otorgada por excelencia academica. Modernizacion de sistemas y asistentes de IA para investigacion.',
     },
     {
-      periodo: '[ANIO]',
-      titulo: '[QUE HICISTE / DONDE]',
-      detalle: '[UNA O DOS LINEAS de contexto.]',
+      periodo: '2024 — 2025',
+      titulo: 'NTT DATA, Acecom, Innovation Cleverly',
+      detalle:
+        'Desarrollo full stack en entornos de empresa. En Acecom pase a liderar el area web, coordinando a mas de diez desarrolladores.',
+    },
+    {
+      periodo: '2025',
+      titulo: 'Makers Fellowship',
+      detalle:
+        'Seleccionada para una comunidad de desarrolladores menores de 24 anios, tras construir una plataforma con IA en 24 horas.',
     },
   ],
 }
 
 export const CONTACTO = {
   etiqueta: 'Contacto',
-  titular: '[UNA INVITACION: para que te escriban. Corta y directa.]',
-  email: '[tu-email@dominio.com]',
-  nota: '[UNA LINEA: que tipo de mensajes te interesan.]',
+  titular: 'Si tenes un problema que te importa resolver, escribime.',
+  email: 'melissa@cofoundy.dev',
+  nota:
+    'Me interesan las colaboraciones: proyectos con impacto social, productos en etapa temprana, o simplemente un problema dificil que quieras pensar en voz alta.',
 }
