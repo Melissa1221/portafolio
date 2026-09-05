@@ -4,7 +4,7 @@
  */
 
 export const NAV = [
-  { label: 'Sobre mi', href: '#sobre' },
+  { label: 'Sobre mí', href: '#sobre' },
   { label: 'Trabajo', href: '#trabajo' },
   { label: 'Camino', href: '#camino' },
   { label: 'Contacto', href: '#contacto' },
@@ -21,51 +21,58 @@ export const HERO = {
   apellido: 'Iman',
   anio: '2026',
   izquierda: [
-    'Ingenieria de software y producto',
-    'Ciencia de la Computacion, UNI',
+    'Ingeniería de software y producto',
+    'Ciencia de la Computación, UNI',
     'Escucho problemas y construyo la salida',
   ],
-  derecha: ['Lima, Peru', 'UNI — FC'],
+  derecha: ['Lima, Perú', 'UNI — FC'],
 }
 
 export const SOBRE = {
-  etiqueta: 'Sobre mi',
+  etiqueta: 'Sobre mí',
 
-  // OPCION A (la que esta activa). Apunta a tu manera de trabajar.
+  // OPCION A (activa). Corta, con ritmo de tres tiempos.
   titular:
-    'Me interesa menos la tecnologia que la persona del otro lado. Escucho un problema, entiendo a quien le duele, y recien ahi decido que construir.',
+    'Escucho el problema. Entiendo a quién le duele. Recién ahí decido qué construir.',
 
-  // OPCION B — si preferis esta, borra la de arriba y descomenta:
-  // titular:
-  //   'Construyo software para problemas que le importan a alguien. Empiezo escuchando, y el codigo viene despues.',
+  // OPCION B — la mas corta de todas:
+  // titular: 'Primero escucho. Después construyo.',
 
-  // OPCION C — mas corta y directa:
+  // OPCION C — pone el foco en la persona, sin restarle a lo tecnico:
   // titular:
-  //   'Escucho problemas. Construyo la salida. En ese orden.',
+  //   'Construyo para alguien concreto. Primero entiendo a quién le duele el problema, y recién ahí escribo la primera línea.',
+
+  // OPCION D — declarativa, dice a que te dedicas:
+  // titular:
+  //   'Hago software para problemas que le importan a alguien.',
+
+  // OPCION E — con la tension entre escuchar y construir:
+  // titular:
+  //   'Me paso más tiempo entendiendo el problema que escribiendo la solución. Por eso la solución funciona.',
 
   parrafos: [
-    'Naci en Lima y estudio Ciencia de la Computacion en la Universidad Nacional de Ingenieria. Entre a la carrera con una beca del BCP y desde los primeros ciclos me meti a competir en hackathons: llegue a finalista nacional del Hult Prize, y esa costumbre de armar algo funcionando contra reloj me llevo a la hackathon de Platanus en Chile, a Suiza, y a una pasantia de investigacion con financiamiento completo en la Universidad de Alberta, en Canada.',
-    'Hoy hago ingenieria de software y gestion de producto. Lo que de verdad me mueve es crear empresas y resolver problemas de gente real, sobre todo los sociales: finanzas personales para quien nunca llevo un registro de sus gastos, o pequenos emprendedores que necesitan digitalizarse y ordenarse para poder crecer. Me gusta sentarme a escuchar un problema complejo y encontrar por donde la tecnologia lo destraba.',
+    'Nací en Lima y estudio Ciencia de la Computación en la Universidad Nacional de Ingeniería. Entré a la carrera con una beca del BCP y desde los primeros ciclos me metí a competir en hackathons: llegué a finalista nacional del Hult Prize, y esa costumbre de armar algo funcionando contra reloj me llevó a la hackathon de Platanus en Chile, a Suiza, y a una pasantía de investigación con financiamiento completo en la Universidad de Alberta, en Canadá.',
+    'Hoy hago ingeniería de software y gestión de producto. Lo que de verdad me mueve es crear empresas y resolver problemas de gente real, sobre todo los sociales: finanzas personales para quien nunca llevó un registro de sus gastos, o pequeños emprendedores que necesitan digitalizarse y ordenarse para poder crecer. Me gusta sentarme a escuchar un problema complejo y encontrar por dónde la tecnología lo destraba.',
   ],
 
   datos: [
-    { clave: 'Estudio', valor: 'Ciencia de la Computacion, UNI' },
-    { clave: 'Enfoque', valor: 'Producto e ingenieria de software' },
-    { clave: 'Base', valor: 'Lima, Peru' },
+    { clave: 'Estudio', valor: 'Ciencia de la Computación, UNI' },
+    { clave: 'Enfoque', valor: 'Producto e ingeniería de software' },
+    { clave: 'Base', valor: 'Lima, Perú' },
   ],
 }
 
 export const TRABAJO = {
   etiqueta: 'Trabajo',
-  titular: 'Investigacion, sistemas legados y producto: tres formas de atacar el mismo problema.',
+  titular: 'Investigación, sistemas legados y producto: tres formas de atacar el mismo problema.',
   proyectos: [
     {
-      titulo: 'Evaluacion automatica de usabilidad web',
+      titulo: 'Evaluación automática de usabilidad web',
       rol: 'Tesis',
       anio: '2026',
       descripcion:
-        'Framework que evalua la usabilidad de una interfaz web usando agentes inteligentes multimodales. Auditar usabilidad hoy exige horas de un especialista; la propuesta es que un agente lea la pantalla como la leeria una persona y reporte donde se traba.',
-      tags: ['Agentes multimodales', 'Usabilidad', 'Investigacion'],
+        'Framework que evalúa la usabilidad de una interfaz web usando agentes inteligentes multimodales. Auditar usabilidad hoy exige horas de un especialista; la propuesta es que un agente lea la pantalla como la leería una persona y reporte dónde se traba.',
+      tags: ['Agentes multimodales', 'Usabilidad', 'Investigación'],
       href: '#',
     },
     {
@@ -73,8 +80,8 @@ export const TRABAJO = {
       rol: 'Co-fundadora',
       anio: '2024 — presente',
       descripcion:
-        'Consultora de software e IA a medida para empresas. Detectamos procesos manuales y repetitivos, y los automatizamos. Trabajo de punta a punta: entender donde se pierde el tiempo, disenar la solucion y llevarla a produccion.',
-      tags: ['Next.js', 'LangGraph', 'AWS', 'Automatizacion'],
+        'Consultora de software e IA a medida para empresas. Detectamos procesos manuales y repetitivos, y los automatizamos. Trabajo de punta a punta: entender dónde se pierde el tiempo, diseñar la solución y llevarla a producción.',
+      tags: ['Next.js', 'LangGraph', 'AWS', 'Automatización'],
       href: '#',
     },
     {
@@ -82,7 +89,7 @@ export const TRABAJO = {
       rol: 'Investigadora',
       anio: '2025',
       descripcion:
-        'Pasantia de investigacion con beca completa en el Departamento de Ingenieria Civil. Migre un sistema de 15 anios y 11,000 lineas de una estructura monolitica a arquitectura modular en C++, y construi un sistema RAG multimodal que lee PDFs, hojas de calculo e imagenes para que el equipo encuentre en segundos lo que antes buscaba a mano.',
+        'Pasantía de investigación con beca completa en el Departamento de Ingeniería Civil. Migré un sistema de 15 años y 11,000 líneas de una estructura monolítica a arquitectura modular en C++, y construí un sistema RAG multimodal que lee PDFs, hojas de cálculo e imágenes para que el equipo encuentre en segundos lo que antes buscaba a mano.',
       tags: ['LangChain', 'Bases vectoriales', 'C++', 'RAG'],
       href: '#',
     },
@@ -91,7 +98,7 @@ export const TRABAJO = {
       rol: 'Creadora',
       anio: '2025',
       descripcion:
-        'Chatbot de finanzas personales que corre sobre WhatsApp: registras un gasto escribiendolo como le escribirias a un amigo. Nacio de una idea simple: la gente no lleva sus cuentas porque abrir una app y llenar un formulario es demasiada friccion.',
+        'Chatbot de finanzas personales que corre sobre WhatsApp: registras un gasto escribiéndolo como le escribirías a un amigo. Nació de una idea simple: la gente no lleva sus cuentas porque abrir una app y llenar un formulario es demasiada fricción.',
       tags: ['WhatsApp', 'IA conversacional', 'Finanzas'],
       href: '#',
     },
@@ -100,31 +107,31 @@ export const TRABAJO = {
 
 export const CAMINO = {
   etiqueta: 'Camino',
-  titular: 'De un hackathon en Lima a un laboratorio en Canada, sin soltar la misma pregunta: a quien le sirve esto.',
+  titular: 'De un hackathon en Lima a un laboratorio en Canadá, sin soltar la misma pregunta: a quién le sirve esto.',
   hitos: [
     {
       periodo: '2022 — presente',
-      titulo: 'Ciencia de la Computacion, UNI',
+      titulo: 'Ciencia de la Computación, UNI',
       detalle:
-        'Entre con beca del BCP. Desde los primeros ciclos compiti en hackathons dentro y fuera del pais, y llegue a finalista nacional del Hult Prize.',
+        'Entré con beca del BCP. Desde los primeros ciclos competí en hackathons dentro y fuera del país, y llegué a finalista nacional del Hult Prize.',
     },
     {
       periodo: '2024 — presente',
       titulo: 'Cofoundy — Co-fundadora',
       detalle:
-        'Consultora de software e IA a medida. Automatizamos procesos manuales y repetitivos para empresas, de la deteccion a la produccion.',
+        'Consultora de software e IA a medida. Automatizamos procesos manuales y repetitivos para empresas, de la detección a la producción.',
     },
     {
       periodo: '2025',
-      titulo: 'Universidad de Alberta, Canada',
+      titulo: 'Universidad de Alberta, Canadá',
       detalle:
-        'Pasantia de investigacion con financiamiento completo, otorgada por excelencia academica. Modernizacion de sistemas y asistentes de IA para investigacion.',
+        'Pasantía de investigación con financiamiento completo, otorgada por excelencia académica. Modernización de sistemas y asistentes de IA para investigación.',
     },
     {
       periodo: '2024 — 2025',
       titulo: 'NTT DATA, Acecom, Innovation Cleverly',
       detalle:
-        'Desarrollo full stack en entornos de empresa. En Acecom pase a liderar el area web, coordinando a mas de diez desarrolladores.',
+        'Desarrollo full stack en entornos de empresa. En Acecom pasé a liderar el área web, coordinando a más de diez desarrolladores.',
     },
     {
       periodo: '2025',
@@ -136,15 +143,15 @@ export const CAMINO = {
       periodo: '2025',
       titulo: 'Makers Fellowship',
       detalle:
-        'Seleccionada para una comunidad de desarrolladores menores de 24 anios, tras construir una plataforma con IA en 24 horas.',
+        'Seleccionada para una comunidad de desarrolladores menores de 24 años, tras construir una plataforma con IA en 24 horas.',
     },
   ],
 }
 
 export const CONTACTO = {
   etiqueta: 'Contacto',
-  titular: 'Si tenes un problema que te importa resolver, escribime.',
+  titular: 'Si tienes un problema que te importa resolver, escríbeme.',
   email: 'melissa@cofoundy.dev',
   nota:
-    'Me interesan las colaboraciones: proyectos con impacto social, productos en etapa temprana, o simplemente un problema dificil que quieras pensar en voz alta.',
+    'Me interesan las colaboraciones: proyectos con impacto social, productos en etapa temprana, o simplemente un problema difícil que quieras pensar en voz alta.',
 }

@@ -75,7 +75,7 @@ export function Header() {
 
         <button
           type="button"
-          aria-label={open ? 'Cerrar menu' : 'Abrir menu'}
+          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
           className="anim-fade-up relative z-50 flex h-10 w-10 items-center justify-center sm:hidden"
@@ -121,7 +121,7 @@ export function Header() {
       >
         <button
           type="button"
-          aria-label="Cerrar menu"
+          aria-label="Cerrar menú"
           onClick={() => setOpen(false)}
           className="absolute right-6 top-6 z-50 text-cookie transition-all duration-300"
           style={{
@@ -141,7 +141,7 @@ export function Header() {
             transitionDelay: open ? '250ms' : '0ms',
           }}
         >
-          Indice
+          Índice
         </p>
 
         <nav className="mt-4 flex flex-col gap-1">
@@ -170,7 +170,7 @@ export function Header() {
             transitionDelay: open ? '500ms' : '0ms',
           }}
         >
-          Encuentrame
+          Encuéntrame
         </p>
 
         <nav className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
