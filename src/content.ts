@@ -44,7 +44,7 @@ export const SOBRE = {
   //   'Escucho problemas. Construyo la salida. En ese orden.',
 
   parrafos: [
-    'Naci en Lima y estudio Ciencia de la Computacion en la Universidad Nacional de Ingenieria. Entre a la carrera con una beca del BCP y desde los primeros ciclos me meti a competir en hackathons: llegue a finalista nacional del Hult Prize, y esa costumbre de armar algo funcionando contra reloj me llevo a Chile, a Suiza y a una pasantia de investigacion con financiamiento completo en la Universidad de Alberta, en Canada.',
+    'Naci en Lima y estudio Ciencia de la Computacion en la Universidad Nacional de Ingenieria. Entre a la carrera con una beca del BCP y desde los primeros ciclos me meti a competir en hackathons: llegue a finalista nacional del Hult Prize, y esa costumbre de armar algo funcionando contra reloj me llevo a la hackathon de Platanus en Chile, a Suiza, y a una pasantia de investigacion con financiamiento completo en la Universidad de Alberta, en Canada.',
     'Hoy hago ingenieria de software y gestion de producto. Lo que de verdad me mueve es crear empresas y resolver problemas de gente real, sobre todo los sociales: finanzas personales para quien nunca llevo un registro de sus gastos, o pequenos emprendedores que necesitan digitalizarse y ordenarse para poder crecer. Me gusta sentarme a escuchar un problema complejo y encontrar por donde la tecnologia lo destraba.',
   ],
 
@@ -69,21 +69,30 @@ export const TRABAJO = {
       href: '#',
     },
     {
-      titulo: 'Genera',
-      rol: 'Co-fundadora y lider tecnica',
-      anio: '2024 — 2025',
+      titulo: 'Cofoundy',
+      rol: 'Co-fundadora',
+      anio: '2024 — presente',
       descripcion:
-        'Plataforma de generacion de planificacion curricular para docentes con IA generativa. Del cero a produccion en dos meses, con arquitectura full stack en Next.js y LangChain, y alianzas con universidades y entidades de gobierno.',
-      tags: ['Next.js', 'LangChain', 'TypeScript', 'Producto'],
+        'Consultora de software e IA a medida para empresas. Detectamos procesos manuales y repetitivos, y los automatizamos. Trabajo de punta a punta: entender donde se pierde el tiempo, disenar la solucion y llevarla a produccion.',
+      tags: ['Next.js', 'LangGraph', 'AWS', 'Automatizacion'],
       href: '#',
     },
     {
-      titulo: 'Asistente RAG multimodal — U. de Alberta',
+      titulo: 'Sistema RAG multimodal — U. de Alberta',
       rol: 'Investigadora',
       anio: '2025',
       descripcion:
-        'Pasantia de investigacion con beca completa en el Departamento de Ingenieria Civil. Migre un sistema de 15 anios y 11,000 lineas de una estructura monolitica a arquitectura modular en C++, y construi un asistente RAG que procesa PDFs e imagenes para acelerar la busqueda documental del equipo.',
+        'Pasantia de investigacion con beca completa en el Departamento de Ingenieria Civil. Migre un sistema de 15 anios y 11,000 lineas de una estructura monolitica a arquitectura modular en C++, y construi un sistema RAG multimodal que lee PDFs, hojas de calculo e imagenes para que el equipo encuentre en segundos lo que antes buscaba a mano.',
       tags: ['LangChain', 'Bases vectoriales', 'C++', 'RAG'],
+      href: '#',
+    },
+    {
+      titulo: 'Bilio',
+      rol: 'Creadora',
+      anio: '2025',
+      descripcion:
+        'Chatbot de finanzas personales que corre sobre WhatsApp: registras un gasto escribiendolo como le escribirias a un amigo. Nacio de una idea simple: la gente no lleva sus cuentas porque abrir una app y llenar un formulario es demasiada friccion.',
+      tags: ['WhatsApp', 'IA conversacional', 'Finanzas'],
       href: '#',
     },
   ],
@@ -97,13 +106,13 @@ export const CAMINO = {
       periodo: '2022 — presente',
       titulo: 'Ciencia de la Computacion, UNI',
       detalle:
-        'Entre con beca del BCP. Desde los primeros ciclos compiti en hackathons en Peru, Chile y Suiza, y llegue a finalista nacional del Hult Prize.',
+        'Entre con beca del BCP. Desde los primeros ciclos compiti en hackathons dentro y fuera del pais, y llegue a finalista nacional del Hult Prize.',
     },
     {
       periodo: '2024 — presente',
-      titulo: 'Cofoundy — Co-fundadora y lider tecnica',
+      titulo: 'Cofoundy — Co-fundadora',
       detalle:
-        'Consultora de software que acompania a fundadores como su socio tecnico. Lidere Genera y arme los procesos de desarrollo del equipo.',
+        'Consultora de software e IA a medida. Automatizamos procesos manuales y repetitivos para empresas, de la deteccion a la produccion.',
     },
     {
       periodo: '2025',
@@ -116,6 +125,12 @@ export const CAMINO = {
       titulo: 'NTT DATA, Acecom, Innovation Cleverly',
       detalle:
         'Desarrollo full stack en entornos de empresa. En Acecom pase a liderar el area web, coordinando a mas de diez desarrolladores.',
+    },
+    {
+      periodo: '2025',
+      titulo: 'Hackathon de Platanus, Chile',
+      detalle:
+        'Nos eligieron para competir en la hackathon de Platanus, la aceleradora chilena, en Santiago.',
     },
     {
       periodo: '2025',
