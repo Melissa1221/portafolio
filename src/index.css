@@ -39,7 +39,8 @@
   }
 
   .anim-fade-up {
-    animation-name: fadeUp;
+    /* El texto sigue visible si el navegador bloquea o interrumpe animaciones. */
+    animation-name: slideUp;
     animation-duration: 0.9s;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -75,9 +76,8 @@
   }
 }
 
-@keyframes fadeUp {
+@keyframes slideUp {
   from {
-    opacity: 0;
     transform: translateY(28px);
   }
   to {

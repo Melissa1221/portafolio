@@ -1,8 +1,10 @@
-import { CONTACTO, HERO, SOCIAL } from '../content'
+import { useTranslation } from '../i18n'
 import { Etiqueta } from './Etiqueta'
 import { Reveal } from './Reveal'
 
 export function Contacto() {
+  const { t } = useTranslation()
+  const { CONTACTO, HERO, SOCIAL } = t
   return (
     <section
       id="contacto"
@@ -69,7 +71,7 @@ export function Contacto() {
           &copy; {HERO.anio} {HERO.nombre} Iman Noriega
         </p>
         <a href="#inicio" className="transition-opacity duration-300 hover:opacity-60">
-          Volver arriba
+          {t.ui.backToTop}
         </a>
       </div>
     </section>

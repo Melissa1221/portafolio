@@ -155,3 +155,63 @@ export const CONTACTO = {
   nota:
     'Me interesan las colaboraciones: proyectos con impacto social, productos en etapa temprana, o simplemente un problema difícil que quieras pensar en voz alta.',
 }
+
+export const ES = { NAV, SOCIAL, HERO, SOBRE, TRABAJO, CAMINO, CONTACTO, ui: { index: 'Índice', findMe: 'Encuéntrame', openMenu: 'Abrir menú', closeMenu: 'Cerrar menú', portraitAlt: 'Retrato de Melissa Iman Noriega', backToTop: 'Volver arriba' } }
+
+export const EN = {
+  NAV: [
+    { label: 'About', href: '#sobre' },
+    { label: 'Work', href: '#trabajo' },
+    { label: 'Path', href: '#camino' },
+    { label: 'Contact', href: '#contacto' },
+  ],
+  SOCIAL,
+  HERO: {
+    nombre: 'Melissa', apellido: 'Iman', anio: '2026',
+    izquierda: ['Software engineering and product', 'Computer Science, UNI', 'I listen to problems and build the way forward'],
+    derecha: ['Lima, Peru', 'UNI — FC'],
+  },
+  SOBRE: {
+    etiqueta: 'About',
+    titular: 'I listen to the problem. I understand who it hurts. Only then do I decide what to build.',
+    parrafos: [
+      'I was born in Lima and study Computer Science at the National University of Engineering. I entered the program on a BCP scholarship and began competing in hackathons early on: I became a national Hult Prize finalist, and the habit of building working products against the clock took me to Platanus’ hackathon in Chile, Switzerland, and a fully funded research internship at the University of Alberta in Canada.',
+      'Today I work in software engineering and product management. What truly drives me is building companies and solving real people’s problems, especially social ones: personal finance for people who have never tracked their expenses, or small business owners who need to digitize and organize to grow. I like sitting with a complex problem and finding where technology can unlock it.',
+    ],
+    datos: [
+      { clave: 'Education', valor: 'Computer Science, UNI' },
+      { clave: 'Focus', valor: 'Product and software engineering' },
+      { clave: 'Based in', valor: 'Lima, Peru' },
+    ],
+  },
+  TRABAJO: {
+    etiqueta: 'Work',
+    titular: 'Research, legacy systems, and product: three ways to tackle the same problem.',
+    proyectos: [
+      { titulo: 'Automated web usability evaluation', rol: 'Thesis', anio: '2026', descripcion: 'A framework that evaluates a web interface’s usability using multimodal intelligent agents. A usability audit currently demands hours from a specialist; the proposal is for an agent to read the screen as a person would and report where people get stuck.', tags: ['Multimodal agents', 'Usability', 'Research'], href: '#' },
+      { titulo: 'Cofoundy', rol: 'Co-founder', anio: '2024 — present', descripcion: 'A custom software and AI consultancy for companies. We identify manual, repetitive processes and automate them. End-to-end work: understand where time is lost, design the solution, and take it to production.', tags: ['Next.js', 'LangGraph', 'AWS', 'Automation'], href: '#' },
+      { titulo: 'Multimodal RAG system — U. of Alberta', rol: 'Researcher', anio: '2025', descripcion: 'Fully funded research internship in the Department of Civil Engineering. I migrated a 15-year-old, 11,000-line system from a monolithic structure to a modular C++ architecture, and built a multimodal RAG system that reads PDFs, spreadsheets, and images so the team can find in seconds what they previously searched for manually.', tags: ['LangChain', 'Vector databases', 'C++', 'RAG'], href: '#' },
+      { titulo: 'Bilio', rol: 'Creator', anio: '2025', descripcion: 'A personal-finance chatbot on WhatsApp: record an expense by writing it as you would to a friend. It came from a simple idea: people do not keep track of their money because opening an app and filling out a form creates too much friction.', tags: ['WhatsApp', 'Conversational AI', 'Finance'], href: '#' },
+    ],
+  },
+  CAMINO: {
+    etiqueta: 'Path',
+    titular: 'From a hackathon in Lima to a lab in Canada, without letting go of the same question: who does this help?',
+    hitos: [
+      { periodo: '2022 — present', titulo: 'Computer Science, UNI', detalle: 'I entered with a BCP scholarship. From my first terms I competed in hackathons in Peru and abroad, becoming a national Hult Prize finalist.' },
+      { periodo: '2024 — present', titulo: 'Cofoundy — Co-founder', detalle: 'Custom software and AI consultancy. We automate companies’ manual, repetitive processes, from discovery through production.' },
+      { periodo: '2025', titulo: 'University of Alberta, Canada', detalle: 'Fully funded research internship awarded for academic excellence. Systems modernization and AI assistants for research.' },
+      { periodo: '2024 — 2025', titulo: 'NTT DATA, Acecom, Innovation Cleverly', detalle: 'Full-stack development in enterprise environments. At Acecom I went on to lead the web area, coordinating more than ten developers.' },
+      { periodo: '2025', titulo: 'Platanus Hackathon, Chile', detalle: 'Selected to compete at the hackathon organized by Platanus, the Chilean accelerator, in Santiago.' },
+      { periodo: '2025', titulo: 'Makers Fellowship', detalle: 'Selected for a community of developers under 24 after building an AI platform in 24 hours.' },
+    ],
+  },
+  CONTACTO: {
+    etiqueta: 'Contact', titular: 'If you have a problem you care about solving, write to me.', email: 'melissa@cofoundy.dev',
+    nota: 'I am interested in collaborations: projects with social impact, early-stage products, or simply a hard problem you would like to think through out loud.',
+  },
+  ui: { index: 'Index', findMe: 'Find me', openMenu: 'Open menu', closeMenu: 'Close menu', portraitAlt: 'Portrait of Melissa Iman Noriega', backToTop: 'Back to top' },
+}
+
+export const content = { en: EN, es: ES }
+export type Language = keyof typeof content

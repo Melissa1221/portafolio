@@ -1,8 +1,10 @@
-import { CAMINO } from '../content'
+import { useTranslation } from '../i18n'
 import { Etiqueta } from './Etiqueta'
 import { Reveal } from './Reveal'
 
 export function Camino() {
+  const { t } = useTranslation()
+  const { CAMINO } = t
   return (
     <section id="camino" className="border-t border-cookie/15 px-6 py-24 sm:px-10 sm:py-36">
       <Reveal>

@@ -1,6 +1,8 @@
-import { HERO, NAV, SOCIAL } from '../content'
+import { useTranslation } from '../i18n'
 
 export function Hero() {
+  const { t } = useTranslation()
+  const { HERO } = t
   return (
     <section id="inicio" className="relative h-[100dvh] w-full overflow-hidden">
       {/* fondo full-bleed */}
@@ -32,7 +34,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex justify-center">
         <img
           src="/img/melissa.webp"
-          alt="Retrato de Melissa Iman Noriega"
+          alt={t.ui.portraitAlt}
           className="anim-rise-in h-[62vh] w-auto max-w-none object-contain object-bottom sm:h-[86vh]"
           style={{ animationDelay: '300ms' }}
         />
@@ -63,5 +65,3 @@ export function Hero() {
     </section>
   )
 }
-
-export { NAV, SOCIAL }

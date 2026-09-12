@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
-import { HERO, NAV, SOCIAL } from '../content'
+import { useTranslation } from '../i18n'
 
 export function Header() {
+  const { language, setLanguage, t } = useTranslation()
+  const { HERO, NAV, SOCIAL } = t
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -24,7 +26,7 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-30 flex items-start justify-between px-6 pt-6 transition-colors duration-500 sm:px-10 sm:pt-8 ${
+        className={`fixed inset-x-0 top-0 z-50 flex items-start justify-between px-6 pt-6 transition-colors duration-500 sm:px-10 sm:pt-8 ${
           scrolled ? 'bg-ink/85 pb-4 backdrop-blur-md sm:pb-5' : ''
         }`}
       >
@@ -71,11 +73,25 @@ export function Header() {
               </a>
             ))}
           </nav>
+
+          <div className="flex gap-2 font-hn text-xs text-cookie" aria-label="Language selector">
+            {(['en', 'es'] as const).map((option) => (
+              <button
+                key={option}
+                type="button"
+                onClick={() => setLanguage(option)}
+                aria-pressed={language === option}
+                className={`transition-opacity hover:opacity-60 ${language === option ? 'underline underline-offset-4' : 'opacity-55'}`}
+              >
+                {option.toUpperCase()}
+              </button>
+            ))}
+          </div>
         </div>
 
         <button
           type="button"
-          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+          aria-label={open ? t.ui.closeMenu : t.ui.openMenu}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
           className="anim-fade-up relative z-50 flex h-10 w-10 items-center justify-center sm:hidden"
@@ -121,7 +137,7 @@ export function Header() {
       >
         <button
           type="button"
-          aria-label="Cerrar menú"
+          aria-label={t.ui.closeMenu}
           onClick={() => setOpen(false)}
           className="absolute right-6 top-6 z-50 text-cookie transition-all duration-300"
           style={{
@@ -141,7 +157,7 @@ export function Header() {
             transitionDelay: open ? '250ms' : '0ms',
           }}
         >
-          Índice
+          {t.ui.index}
         </p>
 
         <nav className="mt-4 flex flex-col gap-1">
@@ -170,7 +186,7 @@ export function Header() {
             transitionDelay: open ? '500ms' : '0ms',
           }}
         >
-          Encuéntrame
+          {t.ui.findMe}
         </p>
 
         <nav className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
@@ -191,6 +207,14 @@ export function Header() {
             </a>
           ))}
         </nav>
+
+        <div className="mt-12 flex gap-4 font-hn text-sm text-cookie">
+          {(['en', 'es'] as const).map((option) => (
+            <button key={option} type="button" onClick={() => setLanguage(option)} aria-pressed={language === option} className={language === option ? 'underline underline-offset-4' : 'opacity-55'}>
+              {option.toUpperCase()}
+            </button>
+          ))}
+        </div>
       </aside>
     </>
   )

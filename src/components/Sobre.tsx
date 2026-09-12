@@ -1,8 +1,10 @@
-import { SOBRE } from '../content'
+import { useTranslation } from '../i18n'
 import { Etiqueta } from './Etiqueta'
 import { Reveal } from './Reveal'
 
 export function Sobre() {
+  const { t } = useTranslation()
+  const { SOBRE } = t
   return (
     <section id="sobre" className="border-t border-cookie/15 px-6 py-24 sm:px-10 sm:py-36">
       <Reveal>
