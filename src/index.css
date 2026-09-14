@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Servida desde el propio dominio: los bloqueadores de anuncios cortan los
+   CDN de fuentes y el texto se quedaba sin renderizar. */
+@font-face {
+  font-family: 'Helvetica Neue ME';
+  src:
+    url('/fonts/helvetica-neue-me.woff2') format('woff2'),
+    url('/fonts/helvetica-neue-me.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
