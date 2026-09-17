@@ -50,13 +50,14 @@ export const SOBRE = {
   // titular:
   //   'Me paso más tiempo entendiendo el problema que escribiendo la solución. Por eso la solución funciona.',
 
+  // Lo que va entre ** se resalta al renderizar: le da al ojo donde engancharse.
   parrafos: [
-    'Nací en Lima y estudio Ciencia de la Computación en la Universidad Nacional de Ingeniería. Entré a la carrera con una beca del BCP y desde los primeros ciclos me metí a competir en hackathons: llegué a finalista nacional del Hult Prize, y esa costumbre de armar algo funcionando contra reloj me llevó a la hackathon de Platanus en Chile, a Suiza, y a una pasantía de investigación con financiamiento completo en la Universidad de Alberta, en Canadá.',
-    'Hoy hago ingeniería de software y gestión de producto. Lo que de verdad me mueve es crear empresas y resolver problemas de gente real, sobre todo los sociales: finanzas personales para quien nunca llevó un registro de sus gastos, o pequeños emprendedores que necesitan digitalizarse y ordenarse para poder crecer. Me gusta sentarme a escuchar un problema complejo y encontrar por dónde la tecnología lo destraba.',
+    'Nací en Lima y estudio **Ciencia de la Computación en la Universidad Nacional de Ingeniería**. Entré a la carrera con una **beca del BCP** y desde los primeros ciclos me metí a competir en hackathons: llegué a **finalista nacional del Hult Prize**, y esa costumbre de armar algo funcionando contra reloj me llevó a la hackathon de Platanus en Chile, a Suiza, y a una **pasantía de investigación con financiamiento completo en la Universidad de Alberta**, en Canadá.',
+    'Hoy hago **ingeniería de software y gestión de producto**. Lo que de verdad me mueve es **crear empresas y resolver problemas de gente real**, sobre todo los sociales: finanzas personales para quien nunca llevó un registro de sus gastos, o pequeños emprendedores que necesitan digitalizarse y ordenarse para poder crecer. Me gusta sentarme a escuchar un problema complejo y encontrar por dónde la tecnología lo destraba.',
   ],
 
   datos: [
-    { clave: 'Estudio', valor: 'Ciencia de la Computación, UNI' },
+    { clave: 'Estudio', valor: 'Ciencia de la Computación, UNI', icono: '/icons/uni.png' },
     { clave: 'Enfoque', valor: 'Producto e ingeniería de software' },
     { clave: 'Base', valor: 'Lima, Perú' },
   ],
@@ -77,20 +78,32 @@ export const TRABAJO = {
     },
     {
       titulo: 'Cofoundy',
+      logo: '/icons/cofoundy.svg',
       rol: 'Co-fundadora',
       anio: '2024 — presente',
       descripcion:
         'Consultora de software e IA a medida para empresas. Detectamos procesos manuales y repetitivos, y los automatizamos. Trabajo de punta a punta: entender dónde se pierde el tiempo, diseñar la solución y llevarla a producción.',
-      tags: ['Next.js', 'LangGraph', 'AWS', 'Automatización'],
+      tags: [
+        { nombre: 'Next.js', icono: '/icons/nextjs.svg' },
+        { nombre: 'LangGraph', icono: '/icons/langgraph.svg' },
+        { nombre: 'AWS', icono: '/icons/aws.svg' },
+        { nombre: 'Automatización' },
+      ],
       href: '#',
     },
     {
       titulo: 'Sistema RAG multimodal — U. de Alberta',
+      logo: '/icons/alberta.png',
       rol: 'Investigadora',
       anio: '2025',
       descripcion:
         'Pasantía de investigación con beca completa en el Departamento de Ingeniería Civil. Migré un sistema de 15 años y 11,000 líneas de una estructura monolítica a arquitectura modular en C++, y construí un sistema RAG multimodal que lee PDFs, hojas de cálculo e imágenes para que el equipo encuentre en segundos lo que antes buscaba a mano.',
-      tags: ['LangChain', 'Bases vectoriales', 'C++', 'RAG'],
+      tags: [
+        { nombre: 'LangChain', icono: '/icons/langchain.svg' },
+        { nombre: 'Bases vectoriales' },
+        { nombre: 'C++', icono: '/icons/cpp.svg' },
+        { nombre: 'RAG' },
+      ],
       href: '#',
     },
     {
@@ -99,7 +112,11 @@ export const TRABAJO = {
       anio: '2025',
       descripcion:
         'Chatbot de finanzas personales que corre sobre WhatsApp: registras un gasto escribiéndolo como le escribirías a un amigo. Nació de una idea simple: la gente no lleva sus cuentas porque abrir una app y llenar un formulario es demasiada fricción.',
-      tags: ['WhatsApp', 'IA conversacional', 'Finanzas'],
+      tags: [
+        { nombre: 'WhatsApp', icono: '/icons/whatsapp.svg' },
+        { nombre: 'IA conversacional' },
+        { nombre: 'Finanzas' },
+      ],
       href: '#',
     },
   ],
@@ -112,24 +129,28 @@ export const CAMINO = {
     {
       periodo: '2022 — presente',
       titulo: 'Ciencia de la Computación, UNI',
+      icono: '/icons/uni.png',
       detalle:
         'Entré con beca del BCP. Desde los primeros ciclos competí en hackathons dentro y fuera del país, y llegué a finalista nacional del Hult Prize.',
     },
     {
       periodo: '2024 — presente',
       titulo: 'Cofoundy — Co-fundadora',
+      icono: '/icons/cofoundy.svg',
       detalle:
         'Consultora de software e IA a medida. Automatizamos procesos manuales y repetitivos para empresas, de la detección a la producción.',
     },
     {
       periodo: '2025',
       titulo: 'Universidad de Alberta, Canadá',
+      icono: '/icons/alberta.png',
       detalle:
         'Pasantía de investigación con financiamiento completo, otorgada por excelencia académica. Modernización de sistemas y asistentes de IA para investigación.',
     },
     {
       periodo: '2024 — 2025',
       titulo: 'NTT DATA, Acecom, Innovation Cleverly',
+      icono: '/icons/nttdata.svg',
       detalle:
         'Desarrollo full stack en entornos de empresa. En Acecom pasé a liderar el área web, coordinando a más de diez desarrolladores.',
     },
@@ -175,11 +196,11 @@ export const EN = {
     etiqueta: 'About',
     titular: 'I listen to the problem. I understand who it hurts. Only then do I decide what to build.',
     parrafos: [
-      'I was born in Lima and study Computer Science at the National University of Engineering. I entered the program on a BCP scholarship and began competing in hackathons early on: I became a national Hult Prize finalist, and the habit of building working products against the clock took me to Platanus’ hackathon in Chile, Switzerland, and a fully funded research internship at the University of Alberta in Canada.',
-      'Today I work in software engineering and product management. What truly drives me is building companies and solving real people’s problems, especially social ones: personal finance for people who have never tracked their expenses, or small business owners who need to digitize and organize to grow. I like sitting with a complex problem and finding where technology can unlock it.',
+      'I was born in Lima and study **Computer Science at the National University of Engineering**. I entered the program on a **BCP scholarship** and began competing in hackathons early on: I became a **national Hult Prize finalist**, and the habit of building working products against the clock took me to Platanus’ hackathon in Chile, Switzerland, and a **fully funded research internship at the University of Alberta** in Canada.',
+      'Today I work in **software engineering and product management**. What truly drives me is **building companies and solving real people’s problems**, especially social ones: personal finance for people who have never tracked their expenses, or small business owners who need to digitize and organize to grow. I like sitting with a complex problem and finding where technology can unlock it.',
     ],
     datos: [
-      { clave: 'Education', valor: 'Computer Science, UNI' },
+      { clave: 'Education', valor: 'Computer Science, UNI', icono: '/icons/uni.png' },
       { clave: 'Focus', valor: 'Product and software engineering' },
       { clave: 'Based in', valor: 'Lima, Peru' },
     ],
@@ -189,19 +210,19 @@ export const EN = {
     titular: 'Research, legacy systems, and product: three ways to tackle the same problem.',
     proyectos: [
       { titulo: 'Automated web usability evaluation', rol: 'Thesis', anio: '2026', descripcion: 'A framework that evaluates a web interface’s usability using multimodal intelligent agents. A usability audit currently demands hours from a specialist; the proposal is for an agent to read the screen as a person would and report where people get stuck.', tags: ['Multimodal agents', 'Usability', 'Research'], href: '#' },
-      { titulo: 'Cofoundy', rol: 'Co-founder', anio: '2024 — present', descripcion: 'A custom software and AI consultancy for companies. We identify manual, repetitive processes and automate them. End-to-end work: understand where time is lost, design the solution, and take it to production.', tags: ['Next.js', 'LangGraph', 'AWS', 'Automation'], href: '#' },
-      { titulo: 'Multimodal RAG system — U. of Alberta', rol: 'Researcher', anio: '2025', descripcion: 'Fully funded research internship in the Department of Civil Engineering. I migrated a 15-year-old, 11,000-line system from a monolithic structure to a modular C++ architecture, and built a multimodal RAG system that reads PDFs, spreadsheets, and images so the team can find in seconds what they previously searched for manually.', tags: ['LangChain', 'Vector databases', 'C++', 'RAG'], href: '#' },
-      { titulo: 'Bilio', rol: 'Creator', anio: '2025', descripcion: 'A personal-finance chatbot on WhatsApp: record an expense by writing it as you would to a friend. It came from a simple idea: people do not keep track of their money because opening an app and filling out a form creates too much friction.', tags: ['WhatsApp', 'Conversational AI', 'Finance'], href: '#' },
+      { titulo: 'Cofoundy', logo: '/icons/cofoundy.svg', rol: 'Co-founder', anio: '2024 — present', descripcion: 'A custom software and AI consultancy for companies. We identify manual, repetitive processes and automate them. End-to-end work: understand where time is lost, design the solution, and take it to production.', tags: [{ nombre: 'Next.js', icono: '/icons/nextjs.svg' }, { nombre: 'LangGraph', icono: '/icons/langgraph.svg' }, { nombre: 'AWS', icono: '/icons/aws.svg' }, { nombre: 'Automation' }], href: '#' },
+      { titulo: 'Multimodal RAG system — U. of Alberta', logo: '/icons/alberta.png', rol: 'Researcher', anio: '2025', descripcion: 'Fully funded research internship in the Department of Civil Engineering. I migrated a 15-year-old, 11,000-line system from a monolithic structure to a modular C++ architecture, and built a multimodal RAG system that reads PDFs, spreadsheets, and images so the team can find in seconds what they previously searched for manually.', tags: [{ nombre: 'LangChain', icono: '/icons/langchain.svg' }, { nombre: 'Vector databases' }, { nombre: 'C++', icono: '/icons/cpp.svg' }, { nombre: 'RAG' }], href: '#' },
+      { titulo: 'Bilio', rol: 'Creator', anio: '2025', descripcion: 'A personal-finance chatbot on WhatsApp: record an expense by writing it as you would to a friend. It came from a simple idea: people do not keep track of their money because opening an app and filling out a form creates too much friction.', tags: [{ nombre: 'WhatsApp', icono: '/icons/whatsapp.svg' }, { nombre: 'Conversational AI' }, { nombre: 'Finance' }], href: '#' },
     ],
   },
   CAMINO: {
     etiqueta: 'Path',
     titular: 'From a hackathon in Lima to a lab in Canada, without letting go of the same question: who does this help?',
     hitos: [
-      { periodo: '2022 — present', titulo: 'Computer Science, UNI', detalle: 'I entered with a BCP scholarship. From my first terms I competed in hackathons in Peru and abroad, becoming a national Hult Prize finalist.' },
-      { periodo: '2024 — present', titulo: 'Cofoundy — Co-founder', detalle: 'Custom software and AI consultancy. We automate companies’ manual, repetitive processes, from discovery through production.' },
-      { periodo: '2025', titulo: 'University of Alberta, Canada', detalle: 'Fully funded research internship awarded for academic excellence. Systems modernization and AI assistants for research.' },
-      { periodo: '2024 — 2025', titulo: 'NTT DATA, Acecom, Innovation Cleverly', detalle: 'Full-stack development in enterprise environments. At Acecom I went on to lead the web area, coordinating more than ten developers.' },
+      { periodo: '2022 — present', titulo: 'Computer Science, UNI', icono: '/icons/uni.png', detalle: 'I entered with a BCP scholarship. From my first terms I competed in hackathons in Peru and abroad, becoming a national Hult Prize finalist.' },
+      { periodo: '2024 — present', titulo: 'Cofoundy — Co-founder', icono: '/icons/cofoundy.svg', detalle: 'Custom software and AI consultancy. We automate companies’ manual, repetitive processes, from discovery through production.' },
+      { periodo: '2025', titulo: 'University of Alberta, Canada', icono: '/icons/alberta.png', detalle: 'Fully funded research internship awarded for academic excellence. Systems modernization and AI assistants for research.' },
+      { periodo: '2024 — 2025', titulo: 'NTT DATA, Acecom, Innovation Cleverly', icono: '/icons/nttdata.svg', detalle: 'Full-stack development in enterprise environments. At Acecom I went on to lead the web area, coordinating more than ten developers.' },
       { periodo: '2025', titulo: 'Platanus Hackathon, Chile', detalle: 'Selected to compete at the hackathon organized by Platanus, the Chilean accelerator, in Santiago.' },
       { periodo: '2025', titulo: 'Makers Fellowship', detalle: 'Selected for a community of developers under 24 after building an AI platform in 24 hours.' },
     ],

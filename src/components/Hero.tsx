@@ -12,13 +12,29 @@ export function Hero() {
         className="anim-fade-in absolute inset-0 h-full w-full object-cover"
       />
 
-      {/* marquee del nombre */}
+      {/* Nombre. En telefono se lee completo y quieto: el marquee desbordaba
+          la pantalla y solo dejaba ver un pedazo ("a — Iman"). Desde sm,
+          donde si hay ancho, vuelve la cinta en movimiento. */}
       <div
-        className="anim-fade-up absolute inset-x-0 top-[22vh] z-10 overflow-hidden sm:top-[13vh]"
+        className="anim-fade-up absolute inset-x-0 top-[16vh] z-10 px-6 sm:hidden"
+        style={{ animationDelay: '500ms' }}
+      >
+        <h1
+          className="font-display text-[15vw] font-black leading-[0.95] text-cookie"
+          style={{ fontVariationSettings: '"SOFT" 50, "WONK" 1, "opsz" 144' }}
+        >
+          {HERO.nombre}
+          <br />
+          {HERO.apellido}
+        </h1>
+      </div>
+
+      <div
+        className="anim-fade-up absolute inset-x-0 top-[13vh] z-10 hidden overflow-hidden sm:block"
         style={{ animationDelay: '500ms' }}
       >
         <div
-          className="marquee flex w-max whitespace-nowrap font-display text-[9vh] font-black leading-none text-cookie sm:text-[23vh]"
+          className="marquee flex w-max whitespace-nowrap font-display text-[23vh] font-black leading-none text-cookie"
           style={{ fontVariationSettings: '"SOFT" 50, "WONK" 1, "opsz" 144' }}
         >
           <span className="pr-[6vw]">
@@ -35,7 +51,7 @@ export function Hero() {
         <img
           src="/img/melissa.webp"
           alt={t.ui.portraitAlt}
-          className="anim-rise-in h-[62vh] w-auto max-w-none object-contain object-bottom sm:h-[86vh]"
+          className="anim-rise-in h-[58vh] w-auto max-w-none object-contain object-bottom sm:h-[86vh]"
           style={{ animationDelay: '300ms' }}
         />
       </div>

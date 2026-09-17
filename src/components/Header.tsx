@@ -4,7 +4,7 @@ import { useTranslation } from '../i18n'
 
 export function Header() {
   const { language, setLanguage, t } = useTranslation()
-  const { HERO, NAV, SOCIAL } = t
+  const { HERO, NAV, SOCIAL, CONTACTO } = t
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -26,7 +26,7 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 flex items-start justify-between px-6 pt-6 transition-colors duration-500 sm:px-10 sm:pt-8 ${
+        className={`marco fixed inset-x-0 top-0 z-50 flex items-start justify-between pt-6 transition-colors duration-500 sm:pt-8 ${
           scrolled ? 'bg-ink/85 pb-4 backdrop-blur-md sm:pb-5' : ''
         }`}
       >
@@ -130,8 +130,9 @@ export function Header() {
 
       {/* drawer */}
       <aside
+        aria-hidden={!open}
         className={`fixed inset-y-0 right-0 z-40 w-[80%] max-w-sm overflow-y-auto bg-[#2B1013] px-8 py-10 sm:hidden ${
-          open ? 'translate-x-0' : 'translate-x-full'
+          open ? 'translate-x-0' : 'pointer-events-none translate-x-full'
         }`}
         style={{ transition: 'transform 600ms cubic-bezier(0.76, 0, 0.24, 1)' }}
       >
@@ -150,10 +151,9 @@ export function Header() {
         </button>
 
         <p
-          className="mt-10 font-hn text-xs uppercase tracking-[0.2em] text-cookie/50 transition-all duration-500"
+          className="mt-10 font-hn text-xs uppercase tracking-[0.2em] text-cookie/50 transition-transform duration-500"
           style={{
             transform: open ? 'translateY(0)' : 'translateY(16px)',
-            opacity: open ? 1 : 0,
             transitionDelay: open ? '250ms' : '0ms',
           }}
         >
@@ -166,10 +166,9 @@ export function Header() {
               key={item.label}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="font-display text-4xl font-bold text-cookie transition-all duration-500"
+              className="block py-1 font-display text-4xl font-bold text-cookie transition-transform duration-500"
               style={{
                 transform: open ? 'translateY(0)' : 'translateY(24px)',
-                opacity: open ? 1 : 0,
                 transitionDelay: open ? `${300 + i * 80}ms` : '0ms',
               }}
             >
@@ -179,27 +178,39 @@ export function Header() {
         </nav>
 
         <p
-          className="mt-12 font-hn text-xs uppercase tracking-[0.2em] text-cookie/50 transition-all duration-500"
+          className="mt-12 font-hn text-xs uppercase tracking-[0.2em] text-cookie/50 transition-transform duration-500"
           style={{
             transform: open ? 'translateY(0)' : 'translateY(16px)',
-            opacity: open ? 1 : 0,
             transitionDelay: open ? '500ms' : '0ms',
           }}
         >
           {t.ui.findMe}
         </p>
 
-        <nav className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+        {/* El correo es la via principal y en telefono no estaba en ningun lado
+            hasta el pie de pagina. */}
+        <a
+          href={`mailto:${CONTACTO.email}`}
+          onClick={() => setOpen(false)}
+          className="mt-4 block border-b border-cookie/30 pb-2 font-hn text-base text-cookie transition-transform duration-500"
+          style={{
+            transform: open ? 'translateY(0)' : 'translateY(16px)',
+            transitionDelay: open ? '530ms' : '0ms',
+          }}
+        >
+          {CONTACTO.email}
+        </a>
+
+        <nav className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
           {SOCIAL.map((item, i) => (
             <a
               key={item.label}
               href={item.href}
               target={item.href.startsWith('http') ? '_blank' : undefined}
               rel={item.href.startsWith('http') ? 'noreferrer' : undefined}
-              className="font-hn text-sm text-cookie transition-all duration-500"
+              className="py-1 font-hn text-sm text-cookie transition-transform duration-500"
               style={{
                 transform: open ? 'translateY(0)' : 'translateY(16px)',
-                opacity: open ? 1 : 0,
                 transitionDelay: open ? `${550 + i * 60}ms` : '0ms',
               }}
             >

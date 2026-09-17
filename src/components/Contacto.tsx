@@ -8,8 +8,9 @@ export function Contacto() {
   return (
     <section
       id="contacto"
-      className="relative overflow-hidden border-t border-cookie/15 px-6 pt-24 sm:px-10 sm:pt-36"
+      className="relative overflow-hidden border-t border-cookie/15 pt-24 sm:pt-36"
     >
+      <div className="marco">
       <Reveal>
         <Etiqueta>{CONTACTO.etiqueta}</Etiqueta>
       </Reveal>
@@ -55,24 +56,25 @@ export function Contacto() {
         </ul>
       </Reveal>
 
-      {/* nombre gigante de cierre, recortado por abajo */}
-      <Reveal delay={200}>
-        <p
-          className="-mx-6 mt-20 select-none overflow-hidden whitespace-nowrap px-6 font-display text-[17vw] font-black leading-[0.85] text-cookie/[0.12] sm:-mx-10 sm:mt-28 sm:px-10"
-          style={{ fontVariationSettings: '"SOFT" 50, "WONK" 1, "opsz" 144' }}
-          aria-hidden="true"
-        >
-          {HERO.nombre} &mdash; {HERO.apellido}
-        </p>
-      </Reveal>
+        {/* nombre gigante de cierre, recortado por abajo */}
+        <Reveal delay={200}>
+          <p
+            className="mt-20 select-none overflow-hidden whitespace-nowrap font-display text-[17vw] font-black leading-[0.85] text-cookie/[0.12] sm:mt-28"
+            style={{ fontVariationSettings: '"SOFT" 50, "WONK" 1, "opsz" 144' }}
+            aria-hidden="true"
+          >
+            {HERO.nombre} &mdash; {HERO.apellido}
+          </p>
+        </Reveal>
 
-      <div className="flex items-center justify-between border-t border-cookie/15 py-6 font-hn text-xs text-cookie/45">
-        <p>
-          &copy; {HERO.anio} {HERO.nombre} Iman Noriega
-        </p>
-        <a href="#inicio" className="transition-opacity duration-300 hover:opacity-60">
-          {t.ui.backToTop}
-        </a>
+        <div className="flex items-center justify-between border-t border-cookie/15 py-6 font-hn text-xs text-cookie/45">
+          <p>
+            &copy; {HERO.anio} {HERO.nombre} Iman Noriega
+          </p>
+          <a href="#inicio" className="transition-opacity duration-300 hover:opacity-60">
+            {t.ui.backToTop}
+          </a>
+        </div>
       </div>
     </section>
   )

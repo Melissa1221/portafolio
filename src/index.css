@@ -30,6 +30,29 @@
   }
 }
 
+@layer components {
+  /* Ancho de lectura del sitio. En pantallas grandes el texto deja de
+     pegarse al borde izquierdo y se apoya en una columna centrada. */
+  .marco {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 82rem;
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .marco {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .marco {
+      padding-inline: 4rem;
+    }
+  }
+}
+
 @layer utilities {
   .anim-fade-in,
   .anim-rise-in,
